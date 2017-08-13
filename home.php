@@ -79,7 +79,15 @@ get_header(); ?>
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<h3 class="aside-title"><?php the_title(); ?></h3>
 						<div class="entry-content">
-							<?php the_content( __( 'Finish reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
+							<?php //show excerpt if it exists
+								$excerpt = get_the_excerpt();
+								if (!empty($excerpt) ) {
+									the_excerpt();
+								}
+								else { //otherwise show the full content
+									the_content( __( 'Finish reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) );
+								}
+							?>
 						</div><!-- .entry-content -->
 						<div class="entry-meta">
 							<span class="entry-date"><?php the_time('F j, Y'); ?></span>
