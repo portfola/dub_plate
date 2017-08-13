@@ -1,0 +1,149 @@
+/*
+Theme Name: Dub Plate
+Theme URI: http://almerindo.net
+Description: A child of twentyten
+Author: almerindo	
+Version: 3
+Tags: white, green, gray, two-columns, fixed-width, 
+Template: twentyten
+*/
+
+@import url('../twentyten/style.css');
+
+@font-face {
+	font-family: 'GriffosFont Regular';
+	src: url('/wp-content/themes/dub_plate/fonts/GriffosFont.eot');
+	src: local('GriffosFont Regular'), local('GriffosFont'), url('/wp-content/themes/dub_plate/fonts/GriffosFont.woff') format('woff'), url('/wp-content/themes/dub_plate/fonts/GriffosFont.ttf') format('truetype'), url('/wp-content/themes/dub_plate/fonts/GriffosFont.svg#GriffosFont') format('svg');
+}
+
+@font-face {
+	font-family: 'GriffosSCapsFont Regular';
+	src: url('/wp-content/themes/dub_plate/fonts/GriffosSCapsFont.eot');
+	src: local('GriffosSCapsFont Regular'), local('GriffosSCapsFont'), url('/wp-content/themes/dub_plate/fonts/GriffosSCapsFont.woff') format('woff'), url('/wp-content/themes/dub_plate/fonts/GriffosSCapsFont.ttf') format('truetype'), url('/wp-content/themes/dub_plate/fonts/GriffosSCapsFont.svg#GriffosSCapsFont') format('svg');
+}
+
+body {
+	background: #fff;
+	}
+
+body,
+input,
+textarea,
+.page-title span,
+.pingback a.url {
+	font-family: "Courier New", serif;
+	}
+
+a, .entry-meta a, .entry-utility a {color: #0066CC;}
+a:visited {color: #660000;}
+a:hover, .entry-meta a:hover, .entry-utility a:hover {color: #666666;}
+
+h3#comments-title,
+h3#reply-title,
+#cancel-comment-reply-link,
+.form-allowed-tags,
+#site-info,
+#site-title,
+#wp-calendar,
+.comment-meta,
+.comment-body tr th,
+.comment-body thead th,
+.entry-content label,
+.entry-content tr th,
+.entry-content thead th,
+.entry-meta,
+.entry-title,
+.entry-utility,
+#respond label,
+.page-title,
+.pingback p,
+.reply,
+.widget-title,
+.wp-caption-text,
+input[type=submit] {
+	font-family: "Courier New", serif;
+}
+pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+}
+code {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+blockquote {background: #ccc; font-style: italic; margin: 5px 20px 35px; padding: 24px 36px 1px;}
+#header {padding: 0;}
+#branding {background: #009048; color: #fff; height: 90px;}
+#site-title {font-family: "Courier New", serif; font-size: 4em; margin: 30px 0 0 10px;}
+#site-title a {color: #fff;}
+#site-title a:hover {color: #ccc;}
+#site-description {font-family: "GriffosSCapsFont Regular", "Courier New", serif; font-size: 1.3em; font-style: normal; float: left; margin: 0 0 0 15px; width: 100%;}
+#access {background: #ccc; height: 33px;}
+#access .menu-header, div.menu, #access .menu, #access div.menu ul {font-family: "GriffosFont Regular", "Courier New", serif; font-size: 1.3em;}
+#access a {color: #000; line-height: 1.8em;}
+#access a:hover, #access li.current_page_item:hover {color: #fff;}
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: none;
+	color: #fff;
+}
+#access ul li.current_page_item > a, #access ul li.current-menu-ancestor > a, #access ul li.current-menu-item > a, #access ul li.current-menu-parent > a {color: #000;}
+#access ul li.current_page_item > a:hover, #access ul li.current-menu-ancestor > a:hover, #access ul li.current-menu-item > a:hover, #access ul li.current-menu-parent > a:hover {color: #fff;}
+
+#home-container {
+	float: left;
+	margin: 0 -340px 0 0;
+	width: 100%;
+	}
+
+#content .entry-title, #home-content .entry-title {
+	color: #000;
+	font-family: "GriffosFont Regular", "Courier New", serif;
+	font-size: 1.8em;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin-bottom: 0;
+	}
+
+#content, #content input, #content textarea {
+
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0 280px 20px 20px;
+	}
+
+#home-content, #home-content input, #home-content textarea {
+	color: #333;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0 360px 0 20px;
+	}
+
+	#home-content h2, #home-aside h2 {margin: 0 0 20px;}
+
+#home-aside {
+	background: #ccc;
+	border: 3px solid #009048;
+	float: right;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 310px;
+	}
+
+.aside-title h3 {
+	font-family: "GriffosFont Regular", "Courier New", serif;
+	font-size: 16px;
+	}
+
+.entry-title a:active,
+.entry-title a:hover {color: #666;}
+.entry-meta {font-family: "GriffosFont Regular", "Courier New", serif; font-size: 14px; line-height: 18px;}
+
+#nav-above, #nav-below {display: none;}
+#footer-widget-area {padding: 25px;}
+#site-info {color: #e1e1e1; margin-left: 25px;}
+#site-info a {color: #bfbfbf; text-decoration: none;}
+
+.pagination {
+	margin: 20px 0;
+	width: 100%;
+	}
