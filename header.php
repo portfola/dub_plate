@@ -12,6 +12,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -37,20 +38,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo( 'url' ); ?>/favicon.ico" />
-<?php
-	/* We add some JavaScript to pages with the comment form
-	 * to support sites with threaded comments (when in use).
-	 */
-	if ( is_singular() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
-
-	/* Always have wp_head() just before the closing </head>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to add elements to <head> such
-	 * as styles, scripts, and meta tags.
-	 */
-	wp_head();
-?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,13 +46,15 @@
 	<div id="header">
 		<div id="masthead">
 			<div id="branding" role="banner">
-				<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-				<<?php echo $heading_tag; ?> id="site-title">
-					<span>
-						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</span>
-				</<?php echo $heading_tag; ?>>
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+				<div id="headwrap">
+					<?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
+					<<?php echo $heading_tag; ?> id="site-title">
+						<span>
+							<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						</span>
+					</<?php echo $heading_tag; ?>>
+					<div id="site-description"><?php bloginfo( 'description' ); ?></div>
+				</div><!-- #headwrap -->
 
 				<?php
 					// Check if this is a post or page, if it has a thumbnail, and if it's a big one

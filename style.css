@@ -24,7 +24,9 @@ Template: twentyten
 
 body {
 	background: #fff;
-	}
+	box-sizing: border-box;
+	color: #222;
+}
 
 body,
 input,
@@ -32,7 +34,7 @@ textarea,
 .page-title span,
 .pingback a.url {
 	font-family: "Courier New", serif;
-	}
+}
 
 a, .entry-meta a, .entry-utility a {color: #0066CC;}
 a:visited {color: #660000;}
@@ -70,14 +72,23 @@ code {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
+.hentry {
+	margin: 0 0 2em;
+}
+
+body.home div#home-aside div.category-briefly.hentry {
+	margin: 0;
+}
+
 blockquote {background: #ccc; font-style: italic; margin: 5px 20px 35px; padding: 24px 36px 1px;}
 #header {padding: 0;}
-#branding {background: #009048; color: #fff; height: 90px;}
-#site-title {font-family: "Courier New", serif; font-size: 4em; margin: 30px 0 0 10px;}
+#branding {background: #009048; color: #fff; height: 6rem;}
+#headwrap {display: block; float: left; margin: 22px 22px 0;}
+#site-title {font-family: "Courier New", serif; font-size: 4em; margin: 0; width: 100%;}
 #site-title a {color: #fff;}
 #site-title a:hover {color: #ccc;}
-#site-description {font-family: "GriffosSCapsFont Regular", "Courier New", serif; font-size: 1.3em; font-style: normal; float: left; margin: 0 0 0 15px; width: 100%;}
-#access {background: #ccc; height: 33px;}
+#site-description {font-family: "GriffosSCapsFont Regular", "Courier New", serif; font-size: 1.3em; font-style: normal; float: left; margin: 0; width: 100%;}
+#access {background: #ccc; float: none; height: 2.3rem; max-width: 940px;}
 #access .menu-header, div.menu, #access .menu, #access div.menu ul {font-family: "GriffosFont Regular", "Courier New", serif; font-size: 1.3em;}
 #access a {color: #000; line-height: 1.8em;}
 #access a:hover, #access li.current_page_item:hover {color: #fff;}
@@ -89,11 +100,13 @@ blockquote {background: #ccc; font-style: italic; margin: 5px 20px 35px; padding
 #access ul li.current_page_item > a, #access ul li.current-menu-ancestor > a, #access ul li.current-menu-item > a, #access ul li.current-menu-parent > a {color: #000;}
 #access ul li.current_page_item > a:hover, #access ul li.current-menu-ancestor > a:hover, #access ul li.current-menu-item > a:hover, #access ul li.current-menu-parent > a:hover {color: #fff;}
 
-#home-container {
-	float: left;
-	margin: 0 -340px 0 0;
-	width: 100%;
-	}
+#access .menu-header, div.menu, #colophon, #branding, #main, #wrapper {
+	max-width: 940px;
+}
+
+#container {
+	margin: 0;
+}
 
 #content .entry-title, #home-content .entry-title {
 	color: #000;
@@ -102,37 +115,50 @@ blockquote {background: #ccc; font-style: italic; margin: 5px 20px 35px; padding
 	font-weight: bold;
 	line-height: 1.3em;
 	margin-bottom: 0;
-	}
+}
 
 #content, #content input, #content textarea {
-
 	font-size: 1.2em;
 	line-height: 1.4em;
-	margin: 0 280px 20px 20px;
-	}
+	margin: 0 auto;
+	width: 75%;
+}
 
 #home-content, #home-content input, #home-content textarea {
 	color: #333;
 	font-size: 1.2em;
 	line-height: 1.4em;
-	margin: 0 360px 0 20px;
-	}
+	margin: 0 auto 2em;
+	width: 70%;
+}
 
-	#home-content h2, #home-aside h2 {margin: 0 0 20px;}
+body.home #home-container h1 {
+	text-align: center;
+}
+
+#home-content h1 {
+	margin: 0 0 2rem;
+}
+
+#home-aside h1 {
+	margin: 0 0 0.5em
+}
+
+#home-content h2, 
+#home-aside h2 {margin: 0 0 1em;}
 
 #home-aside {
 	background: #ccc;
 	border: 3px solid #009048;
-	float: right;
-	margin-bottom: 20px;
-	padding: 10px;
-	width: 310px;
-	}
+	margin: 0 auto 4rem;
+	padding: 1rem;
+	width: 80%;
+}
 
 .aside-title h3 {
 	font-family: "GriffosFont Regular", "Courier New", serif;
 	font-size: 16px;
-	}
+}
 
 .entry-title a:active,
 .entry-title a:hover {color: #666;}
@@ -146,4 +172,21 @@ blockquote {background: #ccc; font-style: italic; margin: 5px 20px 35px; padding
 .pagination {
 	margin: 20px 0;
 	width: 100%;
+}
+
+@media screen and (max-width: 510px) {
+	#branding {
+		height: 7rem;
 	}
+
+	#home-content, #home-content input, #home-content textarea {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	#site-title {
+		font-size: 2.5em;
+		width: 100%;
+	}
+}
